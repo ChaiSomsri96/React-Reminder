@@ -1,0 +1,227 @@
+body {
+    background-color: white;
+}
+
+.application-offset .container-application:before {
+    background-color: white;
+}
+
+.container-fluid {
+    margin: 0;
+    max-width: 100% !important;
+}
+
+.application .navbar {
+    padding: 0 1rem;
+    margin-bottom: 0;
+}
+
+#myVideo {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 72px;
+    left: 0;
+}
+#video-overlay-container {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.video-24me-logo {
+    width: 350px;
+    height: 510px;
+    left: 5%;
+    position: absolute;
+    background: url(../img/bg.png) no-repeat;
+    background-size: 90%;
+}
+.video-appstore-logo {
+    position: relative;
+    top: 385px;
+    left: 8%;
+    width: 100%;
+}
+.video-header {
+    position: relative;
+    top: 28%;
+    width: 90%;
+    text-align: center;
+    max-width: 336px;
+    line-height: 100%;
+    font-size: 200%;
+    color: #fff;
+}
+p.info-focus, p.jobs-description {
+    font: 16px/26px "HelveticaNeueLTPro-Lt", Arial, Helvetica, sans-serif;
+    height: 130px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.focus-title, .focus-title span {
+    font: 40px volkswagen-serial-mediumRg, Arial, Helvetica, sans-serif;
+    color: #4f4e4e !important;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.thumb {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+.thumb img, .thumb a img {
+     position: relative;
+     z-index: -1;
+     width: 100%;
+     margin: 0 auto;
+     -ms-interpolation-mode: bicubic;
+     overflow: hidden;
+     vertical-align: baseline;
+ }
+.badge-pos:not([class*="--top-left"]):not([class*="--bottom-left"]):not([class*="--bottom-right"]) {
+    top: 0;
+    right: 0;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+.badge.badge-pos {
+    position: absolute;
+}
+.btn-icon__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.align-items-center > .btn-icon {
+    padding: 0;
+}
+.btn-icon.btn-xs {
+    font-size: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.any-icon {
+    height: 70px;
+}
+.card-testimonial .card-testimonial-img-profile {
+    width: 55px;
+    height: 55px;
+    border: 2px solid #efefef;
+}
+.any-icon-xs {
+    height: 20px;
+}
+.form-jointFieldButton .form-group input.form-control {
+    width: 100%;
+    border-right: 1px solid #ced4da;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    font-size: 1.1rem;
+    margin: 0 auto;
+}
+.form-jointFieldButton .form-group {
+    display: block;
+}
+.form-jointFieldButton button {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px auto 0 auto;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    display: block;
+}
+.any-cookieBar .any-cookieBar-messageMobile {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 5px 20px;
+}
+.container-primary-border-sm {
+     border-top: 1px solid #dcdcdc;
+}
+@media (min-width: 768px){
+    .form-jointFieldButton .form-group:first-child {
+        margin-right: -4px;
+    }
+    .form-jointFieldButton .form-group {
+        display: inline-block;
+    }
+    .form-jointFieldButton .form-group input.form-control {
+        width: 380px;
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height: 60px!important;
+    }
+    .form-jointFieldButton .form-group {
+        display: inline-block;
+    }
+    .form-jointFieldButton button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .any-cookieBar .any-cookieBar-message {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 5px 20px 5px 50px;
+    }
+    .any-cookieBar .any-cookieBar-messageMobile {
+        display: none;
+    }
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+}
+.any-cookieBar {
+    position: fixed;
+    display: table;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: auto;
+    text-align: center;
+    background-color: #efefef;
+    font-size: 1rem;
+    z-index: 1000;
+    line-height: 1.5;
+}
+.any-boxShadow-secondary-reversed {
+    box-shadow: 0 -3px 6px rgba(0,0,0,.16), 0 0 6px rgba(0,0,0,.23);
+}
+@media (min-width: 576px) {
+    .application .container-application .page-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form-jointFieldButton .form-group input.form-control {
+        width: 350px;
+    }
+}
+@media (min-width: 1200px){
+    .any-cookieBar .any-cookieBar-message {
+        padding: 5px 20px 5px 200px;
+    }
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (min-width: 992px){
+    .container-gradient-border-sm, .container-primary-border-sm, .container-primary-sm, .container-secondary-sm, .container-tertiary-sm {
+        padding-top: 3.2rem;
+        padding-bottom: 3.2rem;
+    }
+}
