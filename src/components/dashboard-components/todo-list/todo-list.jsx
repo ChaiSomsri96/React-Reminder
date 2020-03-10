@@ -33,7 +33,7 @@ class TodoList extends React.Component {
               <div className="px-3 py-2 row align-items-center">
                 <div className="col-10">
                   <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="check-item-1" checked />
+                    <input type="checkbox" className="custom-control-input" id="check-item-1" defaultChecked />
                     <label className="custom-control-label h6 text-sm" htmlFor="check-item-1">Call with Dave</label>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ class TodoList extends React.Component {
               <div className="px-3 py-2 row align-items-center">
                 <div className="col-10">
                   <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="check-item-4" checked />
+                    <input type="checkbox" className="custom-control-input" id="check-item-4" defaultChecked />
                     <label className="custom-control-label h6 text-sm" htmlFor="check-item-4">Dashboard cards</label>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ class TodoList extends React.Component {
               <div className="px-3 py-2 row align-items-center">
                 <div className="col-10">
                   <div className="custom-control custom-checkbox">
-                    <input type="checkbox" className="custom-control-input" id="check-item-5" checked />
+                    <input type="checkbox" className="custom-control-input" id="check-item-5" defaultChecked />
                     <label className="custom-control-label h6 text-sm" htmlFor="check-item-5">Call with Dave</label>
                   </div>
                 </div>

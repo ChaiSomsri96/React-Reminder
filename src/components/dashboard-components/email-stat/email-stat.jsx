@@ -49,7 +49,7 @@ class EmailStat extends React.Component {
             </span>
             </div>
           </div>
-          <a href="#" className="btn btn-block btn-secondary mt-auto">Open insights</a>
+          <a className="btn btn-block btn-secondary mt-auto">Open insights</a>
         </div>
       </div>
     );

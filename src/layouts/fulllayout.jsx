@@ -6,6 +6,7 @@ import Footer from '../components/footer/footer.jsx';
 import ThemeRoutes from '../routes/routing.jsx';
 import Chat from './chat.jsx';
 import Omni from './omni.jsx';
+import DashStat from './dash-stat.jsx';
 
 class Fulllayout extends React.Component {
 	
@@ -19,6 +20,45 @@ class Fulllayout extends React.Component {
 	
 	
 	render() {
+		let stat = [
+            {
+                id:1,
+                title: 'Spendings',
+                detail: '$7.500',
+                visual:{
+                    progress: 40,
+                    text:'40%',
+                    color:'info'
+                }
+            },{
+                id:2,
+                title: 'New tasks',
+                detail: '34',
+                visual:{
+                    progress: 60,
+                    text:'60%',
+                    color:'dark'
+                }
+            },{
+                id:3,
+                title: 'Finished tasks',
+                detail: '68',
+                visual:{
+                    progress: 80,
+                    color:'danger'
+                }
+            },{
+                id:4,
+                title: 'Issues',
+                detail: '12',
+                visual:{
+                    progress: 20,
+                    text:'20%',
+                    color:'success'
+                }
+            }
+        ]
+        
 		return (
 			<React.Fragment>
 				<Chat />
@@ -27,6 +67,12 @@ class Fulllayout extends React.Component {
 					<Header data={this.state} />
 					<Omni />
 					<div className="page-content">
+						<div className="row">
+							{stat.map((data, key)=>(
+								<DashStat data = {data} key={key}/>
+							))}
+						</div>
+
 						<Switch>
 							{ThemeRoutes.map((prop, key) => {
 								if (prop.redirect) {

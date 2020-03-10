@@ -1,7 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Nav } from 'reactstrap';
-import PerfectScrollbar from 'react-perfect-scrollbar'
 import logolighticon from '../../assets/img/brand/white.png';
 
 class Sidebar extends React.Component {
@@ -20,7 +18,7 @@ class Sidebar extends React.Component {
 	/*--------------------------------------------------------------------------------*/
 	/*Verifies if routeName is the one active (in browser input)                      */
 	/*--------------------------------------------------------------------------------*/
-	activeRoute(routeName) { return this.props.location.pathname.indexOf(routeName) > -1 ? 'selected' : ''; }
+	activeRoute(routeName) { return this.props.location.pathname.indexOf(routeName) > -1 ? 'active' : ''; }
 
 	render() {
 		return(
@@ -48,27 +46,27 @@ class Sidebar extends React.Component {
 						<span className="btn-inner--icon d-block"><i className="fas fa-home fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Home</span>
 					</NavLink>
-					<NavLink to='/url1' className="btn btn-square text-sm">
+					<NavLink to='/notes' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-sticky-note fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Notes</span>
 					</NavLink>
-					<a href='#' role="button" data-toggle="dropdown"  className="btn btn-square text-sm">
+					<a role="button" data-toggle="dropdown"  className={"btn btn-square text-sm "+this.activeRoute('tasks')}>
 						<span className="btn-inner--icon d-block"><i className="fas fa-tasks fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">To-do tasks</span>
 					</a>
-					<NavLink to='/url3' className="btn btn-square text-sm">
+					<NavLink to='/notifications' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-bell fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Notifications</span>
 					</NavLink>
-					<NavLink to='/url4' className="btn btn-square text-sm">
+					<NavLink to='/pay-bill' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-dollar-sign fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Pay Bills</span>
 					</NavLink>
-					<NavLink to='/url5' className="btn btn-square text-sm">
+					<NavLink to='/contacts' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-link fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Contacts</span>
 					</NavLink>
-					<NavLink to='/url6' className="btn btn-square text-sm">
+					<NavLink to='/calendar' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-calendar fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Calendar</span>
 					</NavLink>
@@ -86,36 +84,36 @@ class Sidebar extends React.Component {
 						</a>
 						<div className="dropdown-divider m-0 my-1"></div>
 						<span className="pl-2">Filters</span>
-						<a href="" className="dropdown-item px-1">
+						<NavLink to="/tasks" className="dropdown-item px-1">
 							<span className="fas fa-star"></span>
 							<span>All Tasks</span>
-						</a>
-						<a href="" className="dropdown-item px-1">
+						</NavLink>
+						<NavLink to="/tasks" className="dropdown-item px-1">
 							<span className="fas fa-info-circle"></span>
 							<span>Important</span>
-						</a>
-						<a href="" className="dropdown-item px-1">
+						</NavLink>
+						<NavLink to="/tasks" className="dropdown-item px-1">
 							<span className="fas fa-check"></span>
 							<span>Completed</span>
-						</a>
-						<a href="" className="dropdown-item px-1">
+						</NavLink>
+						<NavLink to="/tasks" className="dropdown-item px-1">
 							<span className="fas fa-trash"></span>
 							<span>Trashed</span>
-						</a>
+						</NavLink>
 						<div className="dropdown-divider m-0 my-1"></div>
 						<span className="pl-2">Labels</span>
-						<a href="" className="dropdown-item px-1">
+						<NavLink to="/tasks" className="dropdown-item px-1">
 							<span className="text-sm text-primary">●</span>
 							<span>Frontend</span>
-						</a>
-						<a href="" className="dropdown-item px-1">
+						</NavLink>
+						<NavLink to="/tasks" className="dropdown-item px-1">
 							<span className="text-sm text-warning">●</span>
 							<span>Backend</span>
-						</a>
-						<a href="" className="dropdown-item px-1">
+						</NavLink>
+						<NavLink to="/tasks" className="dropdown-item px-1">
 							<span className="text-sm text-success">●</span>
 							<span>Doc</span>
-						</a>
+						</NavLink>
 					</div>
 				</div>
 			</div>

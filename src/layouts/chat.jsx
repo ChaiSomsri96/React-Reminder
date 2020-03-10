@@ -22,7 +22,7 @@ class Chat extends React.Component {
                   <div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="">
                     <div>
                       <div className="avatar-parent-child">
-                        <img alt="Image placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg" className="avatar  rounded-circle" />
+                        <img alt="Placeholder" src="../../assets/img/theme/light/team-1-800x800.jpg" className="avatar  rounded-circle" />
                         <span className="avatar-child avatar-badge bg-warning"></span>
                       </div>
                     </div>

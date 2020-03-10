@@ -1,23 +1,9 @@
 import React from 'react';
-import {
-	Nav,
-	NavItem,
-	Navbar,
-	NavbarBrand,
-	Collapse,
-	DropdownItem,
-	Button,
-	UncontrolledDropdown,
-	DropdownToggle,
-	DropdownMenu
-} from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-import profilephoto from '../../assets/img/theme/light/team-4-800x800.jpg';
 /*--------------------------------------------------------------------------------*/
 /* Import images which are need for the HEADER                                    */
 /*--------------------------------------------------------------------------------*/
-import logolighticon from '../../assets/img/brand/white.png';
 
 class Header extends React.Component {
 	constructor(props) {
@@ -43,6 +29,10 @@ class Header extends React.Component {
 		document.getElementById('main-wrapper').classList.toggle('show-sidebar');
 	}
 
+	componentDidMount(){
+		var $svg = document.querySelectorAll('img.svg-inject');
+		window.SVGInjector($svg);
+	}
 	render() {
 		return(
 			<nav className="navbar navbar-main navbar-expand-lg navbar-dark bg-primary navbar-border" id="navbar-main">
@@ -53,19 +43,19 @@ class Header extends React.Component {
 				<div className="navbar-user d-lg-none ml-auto">
 					<ul className="navbar-nav flex-row align-items-center">
 					<li className="nav-item">
-						<a href="#" className="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i className="fas fa-bars"></i></a>
+						<a  className="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i className="fas fa-bars"></i></a>
 					</li>
 					<li className="nav-item">
-						<a href="#" className="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i className="fas fa-search"></i></a>
+						<a  className="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i className="fas fa-search"></i></a>
 					</li>
 					<li className="nav-item dropdown dropdown-animate">
-						<a className="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-bell"></i></a>
+						<a className="nav-link nav-link-icon"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-bell"></i></a>
 						<div className="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
 						<div className="py-3 px-3">
 							<h5 className="heading h6 mb-0">Notifications</h5>
 						</div>
 						<div className="list-group list-group-flush">
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
 								<div>
 								<span className="avatar bg-primary text-white rounded-circle">AM</span>
@@ -78,7 +68,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
 								<div>
 								<span className="avatar bg-warning text-white rounded-circle">SW</span>
@@ -91,7 +81,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="5 hrs ago">
 								<div>
 								<span className="avatar bg-info text-white rounded-circle">JM</span>
@@ -104,7 +94,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
 								<div>
 								<span className="avatar bg-dark text-white rounded-circle">MJ</span>
@@ -117,7 +107,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
 								<div>
 								<span className="avatar bg-primary text-white rounded-circle">RN</span>
@@ -132,14 +122,14 @@ class Header extends React.Component {
 							</a>
 						</div>
 						<div className="py-3 text-center">
-							<a href="#" className="link link-sm link--style-3">View all notifications</a>
+							<a  className="link link-sm link--style-3">View all notifications</a>
 						</div>
 						</div>
 					</li>
 					<li className="nav-item dropdown dropdown-animate">
-						<a className="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a className="nav-link pr-lg-0"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<span className="avatar avatar-sm rounded-circle">
-							<img alt="Image placeholder" src="assets/img/theme/light/team-4-800x800.jpg" />
+							<img alt="placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg" />
 						</span>
 						</a>
 						<div className="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
@@ -178,7 +168,7 @@ class Header extends React.Component {
 					</li>
 					<li className="border-top opacity-2 my-2"></li>
 					<li className="nav-item">
-						<a href="#" className="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i className="fas fa-bars"></i></a>
+						<a  className="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i className="fas fa-bars"></i></a>
 					</li>
 					<li className="nav-item ">
 						<NavLink className="nav-link pl-lg-0" to="home">
@@ -186,13 +176,13 @@ class Header extends React.Component {
 						</NavLink>
 					</li>
 					<li className="nav-item dropdown dropdown-animate" data-toggle="hover">
-						<a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a className="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Application
 						</a>
 						<div className="dropdown-menu dropdown-menu-arrow p-lg-0">
 						<div className="p-lg-4">
 							<div className="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-							<a href="#" className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a  className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Project
 							</a>
 							<div className="dropdown-menu"><a className="dropdown-item" href="../../application/project/card-listing.html">
@@ -210,7 +200,7 @@ class Header extends React.Component {
 							</div>
 							</div>
 							<div className="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-							<a href="#" className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a  className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Task
 							</a>
 							<div className="dropdown-menu"><a className="dropdown-item" href="../../application/task/table-listing.html">
@@ -225,7 +215,7 @@ class Header extends React.Component {
 							</div>
 							</div>
 							<div className="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-							<a href="#" className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a  className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								User
 							</a>
 							<div className="dropdown-menu"><a className="dropdown-item" href="../../application/user/card-listing.html">
@@ -240,7 +230,7 @@ class Header extends React.Component {
 							</div>
 							</div>
 							<div className="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-							<a href="#" className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a  className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Authentication
 							</a>
 							<div className="dropdown-menu"><a className="dropdown-item" href="../../application/authentication/login.html">
@@ -255,7 +245,7 @@ class Header extends React.Component {
 							</div>
 							</div>
 							<div className="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-							<a href="#" className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a  className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Account
 							</a>
 							<div className="dropdown-menu"><a className="dropdown-item" href="../../application/account/profile.html">
@@ -276,7 +266,7 @@ class Header extends React.Component {
 							</div>
 							</div>
 							<div className="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-							<a href="#" className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a  className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Shop
 							</a>
 							<div className="dropdown-menu"><a className="dropdown-item" href="../../application/shop/card-listing.html">
@@ -309,7 +299,7 @@ class Header extends React.Component {
 							</div>
 							</div>
 							<div className="dropdown dropdown-animate dropdown-submenu" data-toggle="hover">
-							<a href="#" className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<a  className="dropdown-item dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Utility
 							</a>
 							<div className="dropdown-menu"><a className="dropdown-item" href="../../application/utility/error-404.html">
@@ -350,14 +340,14 @@ class Header extends React.Component {
 						</a>
 					</li>
 					<li className="nav-item dropdown dropdown-animate" data-toggle="hover">
-						<a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
+						<a className="nav-link dropdown-toggle"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Docs</a>
 						<div className="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
 						<ul className="list-group list-group-flush">
 							<li>
 							<a href="../../docs/index.html" className="list-group-item list-group-item-action" role="button">
 								<div className="media d-flex align-items-center">
 								<figure style={{width: 50}}>
-									<img alt="Image placeholder" src="assets/img/icons/essential/detailed/DOC_File.svg" className="svg-inject img-fluid" style={{height: 50}} />
+									<img alt="placeholder" src="../../assets/img/icons/essential/detailed/DOC_File.svg" className="svg-inject img-fluid" style={{height: 50}} />
 								</figure>
 								<div className="media-body ml-3">
 									<h6 className="mb-1">Documentation</h6>
@@ -370,7 +360,7 @@ class Header extends React.Component {
 							<a href="../../docs/components/index.html" className="list-group-item list-group-item-action" role="button">
 								<div className="media d-flex align-items-center">
 								<figure style={{width: 50}}>
-									<img alt="Image placeholder" src="assets/img/icons/essential/detailed/Mobile_UI.svg" className="svg-inject img-fluid" style={{height: 50}} />
+									<img alt="placeholder" src="../../assets/img/icons/essential/detailed/Mobile_UI.svg" className="svg-inject img-fluid" style={{height: 50}} />
 								</figure>
 								<div className="media-body ml-3">
 									<h6 className="mb-1">Components</h6>
@@ -417,19 +407,19 @@ class Header extends React.Component {
 					</ul>
 					<ul className="navbar-nav ml-lg-auto align-items-center d-none d-lg-flex">
 					<li className="nav-item">
-						<a href="#" className="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i className="fas fa-search"></i></a>
+						<a  className="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i className="fas fa-search"></i></a>
 					</li>
 					<li className="nav-item">
 						<a href="#modal-chat" className="nav-link nav-link-icon" data-toggle="modal"><i className="fas fa-comment-alt"></i></a>
 					</li>
 					<li className="nav-item dropdown dropdown-animate">
-						<a className="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-bell"></i></a>
+						<a className="nav-link nav-link-icon"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-bell"></i></a>
 						<div className="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
 						<div className="py-3 px-3">
 							<h5 className="heading h6 mb-0">Notifications</h5>
 						</div>
 						<div className="list-group list-group-flush">
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
 								<div>
 								<span className="avatar bg-primary text-white rounded-circle">AM</span>
@@ -442,7 +432,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
 								<div>
 								<span className="avatar bg-warning text-white rounded-circle">SW</span>
@@ -455,7 +445,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="5 hrs ago">
 								<div>
 								<span className="avatar bg-info text-white rounded-circle">JM</span>
@@ -468,7 +458,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
 								<div>
 								<span className="avatar bg-dark text-white rounded-circle">MJ</span>
@@ -481,7 +471,7 @@ class Header extends React.Component {
 								</div>
 							</div>
 							</a>
-							<a href="#" className="list-group-item list-group-item-action">
+							<a  className="list-group-item list-group-item-action">
 							<div className="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
 								<div>
 								<span className="avatar bg-primary text-white rounded-circle">RN</span>
@@ -496,15 +486,15 @@ class Header extends React.Component {
 							</a>
 						</div>
 						<div className="py-3 text-center">
-							<a href="#" className="link link-sm link--style-3">View all notifications</a>
+							<a  className="link link-sm link--style-3">View all notifications</a>
 						</div>
 						</div>
 					</li>
 					<li className="nav-item dropdown dropdown-animate">
-						<a className="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a className="nav-link pr-lg-0"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<div className="media media-pill align-items-center">
 							<span className="avatar rounded-circle">
-							<img alt="Image placeholder" src="assets/img/theme/light/team-4-800x800.jpg" />
+							<img alt="placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg" />
 							</span>
 							<div className="ml-2 d-none d-lg-block">
 							<span className="mb-0 text-sm  font-weight-bold">John Snow</span>

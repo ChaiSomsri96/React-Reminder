@@ -96,7 +96,7 @@ class Calendar extends React.Component {
   
       //Display Current Date as Calendar widget header
       var mYear = window.moment().format('YYYY');
-      var mDay =window. moment().format('dddd, MMM D');
+      var mDay = window.moment().format('dddd, MMM D');
       $('.widget-calendar-year').html(mYear);
       $('.widget-calendar-day').html(mDay);
   }
