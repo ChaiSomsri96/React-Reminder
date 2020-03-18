@@ -224,6 +224,7 @@ class Header extends React.Component {
 								<a className="dropdown-item" href="../../application/user/table-listing.html">
 								Table listing
 								</a>
+
 								<a className="dropdown-item" href="../../application/user/profile.html">
 								Profile
 								</a>
@@ -503,10 +504,11 @@ class Header extends React.Component {
 						</a>
 						<div className="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
 						<h6 className="dropdown-header px-0">Hi, John!</h6>
-						<a href="../../application/profile.html" className="dropdown-item">
+
+						<NavLink className="dropdown-item" to="/admin/profile">
 							<i className="fas fa-user"></i>
 							<span>My profile</span>
-						</a>
+						</NavLink>
 						<a href="#!" className="dropdown-item">
 							<i className="fas fa-cog"></i>
 							<span>Settings</span>

@@ -13,7 +13,7 @@ body {
 
 .application .navbar {
     padding: 0 1rem;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 #myVideo {
@@ -204,8 +204,8 @@ p.info-focus, p.jobs-description {
 }
 @media (min-width: 576px) {
     .application .container-application .page-content {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     .form-jointFieldButton .form-group input.form-control {
         width: 350px;

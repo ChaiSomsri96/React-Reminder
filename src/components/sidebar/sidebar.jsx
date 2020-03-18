@@ -42,75 +42,75 @@ class Sidebar extends React.Component {
 					</div>
 				</div>
 				<div className="nav-application clearfix">
-					<NavLink to='/home' className="btn btn-square text-sm">
+					<NavLink to='/admin/home' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-home fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Home</span>
 					</NavLink>
-					<NavLink to='/notes' className="btn btn-square text-sm">
+					<NavLink to='/admin/notes' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-sticky-note fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Notes</span>
 					</NavLink>
-					<a role="button" data-toggle="dropdown"  className={"btn btn-square text-sm "+this.activeRoute('tasks')}>
+					<a role="button" data-toggle="dropdown"  className={"btn btn-square text-sm "+this.activeRoute('admin/tasks')}>
 						<span className="btn-inner--icon d-block"><i className="fas fa-tasks fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">To-do tasks</span>
 					</a>
-					<NavLink to='/notifications' className="btn btn-square text-sm">
+					<NavLink to='/admin/notifications' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-bell fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Notifications</span>
 					</NavLink>
-					<NavLink to='/pay-bill' className="btn btn-square text-sm">
+					<NavLink to='/admin/pay-bill' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-dollar-sign fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Pay Bills</span>
 					</NavLink>
-					<NavLink to='/contacts' className="btn btn-square text-sm">
+					<NavLink to='/admin/contacts' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-link fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Contacts</span>
 					</NavLink>
-					<NavLink to='/calendar' className="btn btn-square text-sm">
+					<NavLink to='/admin/calendar' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-calendar fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Calendar</span>
 					</NavLink>
-					<NavLink to='/url7' className="btn btn-square text-sm">
+					<NavLink to='/admin/url7' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-mail-bulk fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Outlook</span>
 					</NavLink>
-					<NavLink to='/url8' className="btn btn-square text-sm">
+					<NavLink to='/admin/url8' className="btn btn-square text-sm">
 						<span className="btn-inner--icon d-block"><i className="fas fa-birthday-cake fa-2x"></i></span>
 						<span className="btn-inner--icon d-block pt-2">Birthdays</span>
 					</NavLink>
 					<div className="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow p-2 m-0">
-						<a href="" className="btn-sm btn-block btn btn-primary">
+						<NavLink to='/admin/tasks/add' className="btn-sm btn-block btn btn-primary">
 							<span>Add Task</span>
-						</a>
+						</NavLink>
 						<div className="dropdown-divider m-0 my-1"></div>
 						<span className="pl-2">Filters</span>
-						<NavLink to="/tasks" className="dropdown-item px-1">
+						<NavLink to="/admin/tasks" className="dropdown-item px-1">
 							<span className="fas fa-star"></span>
 							<span>All Tasks</span>
 						</NavLink>
-						<NavLink to="/tasks" className="dropdown-item px-1">
+						<NavLink to="/admin/tasks" className="dropdown-item px-1">
 							<span className="fas fa-info-circle"></span>
 							<span>Important</span>
 						</NavLink>
-						<NavLink to="/tasks" className="dropdown-item px-1">
+						<NavLink to="/admin/tasks" className="dropdown-item px-1">
 							<span className="fas fa-check"></span>
 							<span>Completed</span>
 						</NavLink>
-						<NavLink to="/tasks" className="dropdown-item px-1">
+						<NavLink to="/admin/tasks" className="dropdown-item px-1">
 							<span className="fas fa-trash"></span>
 							<span>Trashed</span>
 						</NavLink>
 						<div className="dropdown-divider m-0 my-1"></div>
 						<span className="pl-2">Labels</span>
-						<NavLink to="/tasks" className="dropdown-item px-1">
+						<NavLink to="/admin/tasks" className="dropdown-item px-1">
 							<span className="text-sm text-primary">●</span>
 							<span>Frontend</span>
 						</NavLink>
-						<NavLink to="/tasks" className="dropdown-item px-1">
+						<NavLink to="/admin/tasks" className="dropdown-item px-1">
 							<span className="text-sm text-warning">●</span>
 							<span>Backend</span>
 						</NavLink>
-						<NavLink to="/tasks" className="dropdown-item px-1">
+						<NavLink to="/admin/tasks" className="dropdown-item px-1">
 							<span className="text-sm text-success">●</span>
 							<span>Doc</span>
 						</NavLink>

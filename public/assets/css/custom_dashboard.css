@@ -1,0 +1,25 @@
+/*=======================================================
+@home style
+=======================================================*/
+.wave-bottom-1-0 {
+    clip-path: url(#waveBottom1ID2);
+    fill: #FFFFFF;
+}
+
+.wave-bottom-1-1 {
+    clip-path: url(#waveBottom1ID2);
+    fill: #FFFFFF;
+    fill-opacity: 0;
+}
+
+.wave-bottom-1-2 {
+    clip-path: url(#waveBottom1ID2);
+    fill: #FFFFFF;
+}
+/* #any-cookieBar {display:none;} */
+.application-offset .container-application:before {
+    background-color: white;
+}
+body {
+    background-color: white;
+}

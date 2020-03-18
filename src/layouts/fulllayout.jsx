@@ -61,6 +61,9 @@ class Fulllayout extends React.Component {
         
 		return (
 			<React.Fragment>
+			    <link rel="stylesheet" href="./assets/css/purpose.css" id="stylesheet" />
+
+				<div className="container-fluid container-application">
 				<Chat />
 				<Sidebar data={this.state} {...this.props} routes={ThemeRoutes} />
 				<div className="main-content position-relative">
@@ -87,6 +90,7 @@ class Fulllayout extends React.Component {
 						</Switch>
 					</div>
 					<Footer />
+				</div>
 				</div>
 			</React.Fragment>
 		);

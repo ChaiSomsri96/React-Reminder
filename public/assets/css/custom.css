@@ -1,0 +1,9 @@
+/*=======================================================
+@aboutus style
+=======================================================*/
+.application-offset .container-application:before {
+    background-color: white;
+}
+.application .navbar {
+    margin-bottom: 0
+}
