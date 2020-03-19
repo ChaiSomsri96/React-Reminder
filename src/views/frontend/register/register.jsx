@@ -1,21 +1,31 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
+import {toast} from 'react-toastify';
+import {register} from '../../../services';
 
 class Register extends Component {
     state = {
         email: '',
         password: '',
         is_password: 1, //1:'password', 0: 'text',
-        confirm_password: ''
+        confirm_password: '',
+        privacy: 0,
+        terms: 0
     };
     handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value});
     };
     handleSubmit = (event) => {
-        const {email, password, confirm_password} = this.state;
-        console.log(confirm_password);
-        console.log(password);
+        const {email, password, confirm_password, privacy, terms} = this.state;
+
         if (email.trim().length > 0 && password.trim().length && password === confirm_password) {
+            register(email, password)
+                .then(({ data}) => {
+                    toast.success(data.msg)
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
             this.props.history.push('/login');
         }
     };
@@ -38,14 +48,15 @@ class Register extends Component {
                                         <h6 className="h3">Create account</h6>
                                         <p className="text-muted mb-0">Made with love by developers for developers.</p>
                                     </div>
-                                    <span className="clearfix"></span>
+                                    <span className="clearfix"/>
                                     <form role="form">
                                         <div className="form-group">
                                             <label className="form-control-label">Email address</label>
                                             <div className="input-group input-group-merge">
                                                 <div className="input-group-prepend">
-                                                    <span className="input-group-text"><i
-                                                        className="fas fa-user"></i></span>
+                                                    <span className="input-group-text">
+                                                        <i className="fas fa-user"/>
+                                                    </span>
                                                 </div>
                                                 <input type="email" name="email" value={email}
                                                        onChange={this.handleChange}
@@ -57,8 +68,9 @@ class Register extends Component {
                                             <label className="form-control-label">Password</label>
                                             <div className="input-group input-group-merge">
                                                 <div className="input-group-prepend">
-                                                    <span className="input-group-text"><i
-                                                        className="fas fa-key"></i></span>
+                                                    <span className="input-group-text">
+                                                        <i className="fas fa-key"/>
+                                                    </span>
                                                 </div>
                                                 <input type={password_type} name="password" value={password}
                                                        onChange={this.handleChange} className="form-control"
@@ -69,7 +81,7 @@ class Register extends Component {
                               >
                                 <span style={{color: '#6e00ff'}} data-toggle="password-text"
                                       data-target="#input-password">
-                                  <i className="fas fa-eye"></i>
+                                  <i className="fas fa-eye"/>
                                 </span>
                               </span>
                                                 </div>
@@ -91,14 +103,15 @@ class Register extends Component {
                                         </div>
                                         <div className="my-4">
                                             <div className="custom-control custom-checkbox mb-3">
-                                                <input type="checkbox" className="custom-control-input"
-                                                       id="check-terms"/>
+                                                <input type="checkbox" className="custom-control-input" name="terms"
+                                                       id="check-terms" onChange={this.handleChange}/>
                                                 <label className="custom-control-label" for="check-terms">I agree to
                                                     the <span
                                                         style={{color: '#6e00ff'}}>terms and conditions</span></label>
                                             </div>
                                             <div className="custom-control custom-checkbox">
-                                                <input type="checkbox" className="custom-control-input"
+                                                <input type="checkbox" className="custom-control-input" name="privacy"
+                                                       onChange={this.handleChange}
                                                        id="check-privacy"/>
                                                 <label className="custom-control-label" for="check-privacy">I agree to
                                                     the <span style={{color: '#6e00ff'}}>privacy policy</span></label>
@@ -111,7 +124,7 @@ class Register extends Component {
                                             >
                                                 <span className="btn-inner--text">Create my account</span>
                                                 <span className="btn-inner--icon">
-                                                  <i className="fas fa-long-arrow-alt-right" />
+                                                  <i className="fas fa-long-arrow-alt-right"/>
                                                 </span>
                                             </button>
                                         </div>

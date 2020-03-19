@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
 import Table from '../../../components/ui-components/table'
+import {notificationService} from "../../../services";
 
 
 class Notifications extends Component {
+    handleRead = (event) => {
+        console.log("handle read")
+        notificationService.getAll()
+            .then(datas => {
+                console.log(datas);
+            });
+    };
     rowRender(item, i){
         return (
             <tr key={i}>
@@ -22,7 +30,7 @@ class Notifications extends Component {
                             <span className="text-sm text-danger">●</span>
                             <span>Unread</span>
                         </div>
-                    ) 
+                    )
                 }
                 </th>
                 <th className="text-right">
@@ -40,11 +48,11 @@ class Notifications extends Component {
             {
                 content:'You have received 10 proposals for "Java Developer need who knows project end to end setup as well',
                 date:'5:09 am',
-                read:true 
+                read:true
             },{
                 content:'You have received 10 proposals for "Java Developer need who knows project end to end setup as well',
                 date:'5:09 am',
-                read:false 
+                read:false
             },{
                 content:'You have received 10 proposals for "Java Developer need who knows project end to end setup as well',
                 date:'5:09 am',
@@ -84,7 +92,7 @@ class Notifications extends Component {
                         <div className="card-header border-0">
                             <div className="row card-fluid align-items-center">
                                 <h5 className="mb-0">Notifications</h5>
-                                <button type="button" className="ml-2 btn btn-sm btn-primary btn-icon rounded-pill">
+                                <button type="button" className="ml-2 btn btn-sm btn-primary btn-icon rounded-pill" onClick={this.handleRead}>
                                     <span className="btn-inner--text">Read</span>
                                     <span className="btn-inner--icon"><i className="fas fa-check"></i></span>
                                 </button>
@@ -99,7 +107,7 @@ class Notifications extends Component {
                             </div>
                         </div>
                         <div className="table-responsive">
-                            <Table 
+                            <Table
                                 hasOptions = {false}
                                 headers = {headers}
                                 data= {data}

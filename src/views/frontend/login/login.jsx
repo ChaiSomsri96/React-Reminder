@@ -1,27 +1,37 @@
 import React , {Component} from 'react';
 import { NavLink } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { login } from '../../../services';
 
 class Login extends Component{
     state = {
         email:'',
         password: '',
         is_password:1 //1:'password', 0: 'text'
-    }
+    };
     handleChange = (event)=> {
       this.setState({[event.target.name]: event.target.value});
-    }
+    };
     handleSubmit = (event) => {
       const {email, password} = this.state;
       if(email.trim().length > 0 && password.trim().length){
-          this.props.history.push('/home');
+          login(email, password)
+              .then(({ data }) => {
+                  toast.success(data.msg);
+                  this.props.history.push('/admin/home');
+              })
+              .catch((err) => {
+                  console.log(err)
+                  toast.warn("Username or password is incorrect!")
+              });
       }
-    }
+    };
     handlePassword  = () =>{
       this.setState({is_password: 1-this.state.is_password})
-    }
+    };
     render(){
         const {email, password, is_password} = this.state;
-        let password_type = 'password'; 
+        let password_type = 'password';
         if(!is_password) password_type = 'text';
         return (
             <div className="min-vh-100 py-5 d-flex align-items-center">
@@ -42,7 +52,7 @@ class Login extends Component{
                             <div className="input-group-prepend">
                               <span className="input-group-text"><i className="fas fa-user"></i></span>
                             </div>
-                            <input type="email" className="form-control" id="input-email" 
+                            <input type="email" className="form-control" id="input-email"
                                     placeholder="name@example.com" name="email" value={email} onChange={this.handleChange} />
                           </div>
                         </div>
@@ -60,7 +70,7 @@ class Login extends Component{
                             <div className="input-group-prepend">
                               <span className="input-group-text"><i className="fas fa-key"></i></span>
                             </div>
-                            <input type={password_type} className="form-control" id="input-password" placeholder="Password" 
+                            <input type={password_type} className="form-control" id="input-password" placeholder="Password"
                                 name="password" value={password} onChange={this.handleChange}
                             />
                             <div className="input-group-append">
@@ -82,7 +92,7 @@ class Login extends Component{
                       </form>
                     </div>
                     <div className="card-footer px-md-5"><small>Not registered?</small>
-                      <NavLink to="/register" className="small font-weight-bold"> 
+                      <NavLink to="/register" className="small font-weight-bold">
                         Create account
                       </NavLink>
                     </div>

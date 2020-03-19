@@ -1,6 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import {Calendar,EmailStat,Notification,Timeline,TodoList} from '../../../components/dashboard-components'
 class Starter extends Component {
+    componentDidMount(){
+        window.jQuery.Dragula.init();
+    }
     render() {
         return (
             <Fragment>

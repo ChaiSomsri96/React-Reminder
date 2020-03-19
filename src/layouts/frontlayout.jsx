@@ -15,6 +15,10 @@ class Frontlayout extends React.Component {
 	
 	
 	render() {
+        let show_footer = true;
+        if(this.props.history.location.pathname==='/login' || this.props.history.location.pathname==='/register'){
+            show_footer = false;
+        }
 		return (
             <React.Fragment>
                 <link rel="stylesheet" href="../assets/css/landing.css" />
@@ -37,8 +41,10 @@ class Frontlayout extends React.Component {
                                     }
                                 })}
                             </Switch>
-                        </div>
-                        <Footer />
+                        </div>{
+                            show_footer ?  <Footer /> : null 
+                        }
+                        
                     </div>
                 </div>
             </React.Fragment>

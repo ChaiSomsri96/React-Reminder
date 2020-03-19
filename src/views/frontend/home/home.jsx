@@ -3,7 +3,7 @@ import React , {Component} from 'react';
 class Home extends Component{
     componentDidMount(){
 		var $svg = document.querySelectorAll('img.svg-inject');
-		window.SVGInjector($svg);
+        window.SVGInjector($svg);
 	}
     render(){
         return (
@@ -41,7 +41,7 @@ class Home extends Component{
                     <div className="col-md-4 mb-7">
                         <div className="text-center px-lg-3">
                             <span className="btn btn-icon btn-lg btn-soft-primary rounded-circle mb-5">
-                            <span className="fas fa-fire fa-2x btn-icon__inner btn-icon__inner-bottom-minus"/>
+                            <span className="fas fa-fire fa-2x btn-icon__inner btn-icon__inner-bottom-minus"></span>
                             </span>
                             <h3 className="h5">Front Strategy</h3>
                             <p className="mb-md-0">We strive to figure out ways to help your business grow through all
@@ -52,7 +52,7 @@ class Home extends Component{
                     <div className="col-md-4 mb-7">
                         <div className="text-center px-lg-3">
                             <span className="btn btn-icon btn-lg btn-soft-success rounded-circle mb-5">
-                            <span className="fab fa-whmcs fa-2x btn-icon__inner btn-icon__inner-bottom-minus"/>
+                            <span className="fab fa-whmcs fa-2x btn-icon__inner btn-icon__inner-bottom-minus"></span>
                             </span>
                             <h3 className="h5">Unlimited Power</h3>
                             <p className="mb-md-0">Find what you need in one template and combine features at will.</p>
@@ -205,7 +205,7 @@ class Home extends Component{
                                             <li className="list-group-item">
                                                 <div className="d-flex align-items-center">
                         <span className="btn btn-xs btn-icon btn-soft-primary rounded-circle mr-3">
-                          <span className="fas fa-check btn-icon__inner"/>
+                          <span className="fas fa-check btn-icon__inner"></span>
                         </span>
                                                     400+ pages
                                                 </div>
@@ -213,7 +213,7 @@ class Home extends Component{
                                             <li className="list-group-item">
                                                 <div className="d-flex align-items-center">
                         <span className="btn btn-xs btn-icon btn-soft-primary rounded-circle mr-3">
-                          <span className="fas fa-check btn-icon__inner"/>
+                          <span className="fas fa-check btn-icon__inner"></span>
                         </span>
                                                     100+ header variations
                                                 </div>

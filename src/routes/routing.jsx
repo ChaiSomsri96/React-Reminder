@@ -8,6 +8,7 @@ import PayBill from '../views/backend/pay-bills/pay-bill.jsx';
 import PayForm from '../views/backend/pay-bills/pay-form.jsx';
 import Contacts from '../views/backend/contacts/contacts.jsx';
 import Profile from '../views/backend/profile/profile.jsx';
+import Page404 from '../views/backend/errors/page-404.jsx';
 import Aboutus from '../views/frontend/aboutus/aboutus.jsx';
 import Contactus from '../views/frontend/contactus/contactus.jsx';
 import Home from '../views/frontend/home/home.jsx';
@@ -65,6 +66,16 @@ var ThemeRoutes = [
         name: 'Contacts', 
         icon: 'ti-loop', 
         component: Contacts 
+    },{ 
+        path: '/admin/', 
+        name: '404', 
+        icon: 'ti-loop', 
+        component: Page404 
+    },{ 
+        path: '/admin', 
+        name: 'Home', 
+        icon: 'ti-loop', 
+        component: Starter 
     },{ 
         path: '/aboutus', 
         name: 'Aboutus', 

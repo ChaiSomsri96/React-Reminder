@@ -149,19 +149,19 @@ class PayBill extends Component{
         ];
         
         return(
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="card card-fluid">
-                        <div class="card-header border-0">
-                            <div class="row card-fluid align-items-center">
-                            <h6 class="mb-0">Pay Bills</h6>
-                            <NavLink to="/admin/pay-bill/add" class="ml-2 btn btn-sm btn-primary btn-icon rounded-pill">
-                                <span class="btn-inner--text">Create</span>
-                                <span class="btn-inner--icon"><i class="fas fa-plus-circle"></i></span>
+            <div className="row">
+                <div className="col-xl-12">
+                    <div className="card card-fluid">
+                        <div className="card-header border-0">
+                            <div className="row card-fluid align-items-center">
+                            <h6 className="mb-0">Pay Bills</h6>
+                            <NavLink to="/admin/pay-bill/add" className="ml-2 btn btn-sm btn-primary btn-icon rounded-pill">
+                                <span className="btn-inner--text">Create</span>
+                                <span className="btn-inner--icon"><i className="fas fa-plus-circle"></i></span>
                             </NavLink>
-                            <button type="button" class="ml-2 btn btn-sm btn-danger btn-icon rounded-pill">
-                                <span class="btn-inner--text">Delete</span>
-                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
+                            <button type="button" className="ml-2 btn btn-sm btn-danger btn-icon rounded-pill">
+                                <span className="btn-inner--text">Delete</span>
+                                <span className="btn-inner--icon"><i className="fas fa-trash"></i></span>
                             </button>
                             </div>
                         </div>

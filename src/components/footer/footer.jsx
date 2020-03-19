@@ -7,7 +7,7 @@ class Footer extends React.Component {
       <div className="footer pt-5 pb-4 footer-light" id="footer-main">
         <div className="row text-center text-sm-left align-items-sm-center">
           <div className="col-sm-6">
-            <p className="text-sm mb-0">&copy; 2019 <a href="https://webpixels.io" className="h6 text-sm" >Webpixels</a>. All rights reserved.</p>
+            <p className="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" className="h6 text-sm" >Webpixels</a>. All rights reserved.</p>
           </div>
           <div className="col-sm-6 mb-md-0">
             <ul className="nav justify-content-center justify-content-md-end">

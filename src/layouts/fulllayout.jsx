@@ -62,6 +62,7 @@ class Fulllayout extends React.Component {
 		return (
 			<React.Fragment>
 			    <link rel="stylesheet" href="./assets/css/purpose.css" id="stylesheet" />
+                <link rel="stylesheet" href="./assets/css/custom_admin.css" id="stylesheet" />
 
 				<div className="container-fluid container-application">
 				<Chat />

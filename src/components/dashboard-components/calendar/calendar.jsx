@@ -6,7 +6,7 @@ class Calendar extends React.Component {
     let $ = window.$;
     if($('[data-toggle="widget-calendar"]')[0]) {
       $('[data-toggle="widget-calendar"]').fullCalendar({
-          contentHeight: 'auto',
+          contentHeight: 420,
           theme: false,
           buttonIcons: {
               prev: ' fas fa-angle-left',
