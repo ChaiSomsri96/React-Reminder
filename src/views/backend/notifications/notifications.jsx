@@ -4,13 +4,16 @@ import {notificationService} from "../../../services";
 
 
 class Notifications extends Component {
-    handleRead = (event) => {
-        console.log("handle read")
-        notificationService.getAll()
-            .then(datas => {
-                console.log(datas);
-            });
+    state = {
+        data: []
     };
+    constructor(props) {
+        super(props);
+        notificationService.getAll()
+            .then(response => {
+                this.setState({data: response.data})
+            });
+    }
     rowRender(item, i){
         return (
             <tr key={i}>
@@ -44,21 +47,6 @@ class Notifications extends Component {
         )
     }
     render(){
-        const data=[
-            {
-                content:'You have received 10 proposals for "Java Developer need who knows project end to end setup as well',
-                date:'5:09 am',
-                read:true
-            },{
-                content:'You have received 10 proposals for "Java Developer need who knows project end to end setup as well',
-                date:'5:09 am',
-                read:false
-            },{
-                content:'You have received 10 proposals for "Java Developer need who knows project end to end setup as well',
-                date:'5:09 am',
-                read:false
-            }
-        ]
         const headers = [
             {
                 label:'All',
@@ -83,7 +71,7 @@ class Notifications extends Component {
             },{
                 scope:'col'
             }
-        ]
+        ];
 
         return(
             <div className="row">
@@ -92,7 +80,7 @@ class Notifications extends Component {
                         <div className="card-header border-0">
                             <div className="row card-fluid align-items-center">
                                 <h5 className="mb-0">Notifications</h5>
-                                <button type="button" className="ml-2 btn btn-sm btn-primary btn-icon rounded-pill" onClick={this.handleRead}>
+                                <button type="button" className="ml-2 btn btn-sm btn-primary btn-icon rounded-pill">
                                     <span className="btn-inner--text">Read</span>
                                     <span className="btn-inner--icon"><i className="fas fa-check"></i></span>
                                 </button>
@@ -110,7 +98,7 @@ class Notifications extends Component {
                             <Table
                                 hasOptions = {false}
                                 headers = {headers}
-                                data= {data}
+                                data= {this.state.data}
                                 rowRender = {this.rowRender}
                             />
                         </div>

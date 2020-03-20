@@ -32,9 +32,9 @@ class Pagination extends Component {
         const { totalItems, itemsPerPage, pageIndex, pageIndexHandler } = this.props
         const start = (pageIndex - 1) * itemsPerPage + 1
         const end = pageIndex * itemsPerPage > totalItems ? totalItems : pageIndex * itemsPerPage
-        const maxPageCount = Math.ceil(totalItems/itemsPerPage)
-        let startPage = 0
-        let endPage = 0
+        const maxPageCount = Math.ceil(totalItems/itemsPerPage);
+        let startPage = 0;
+        let endPage = 0;
         if (pageIndex < 4) {
             startPage = 1
             endPage = maxPageCount >= 5 ? 5 : maxPageCount
@@ -87,12 +87,12 @@ class Pagination extends Component {
 }
 
 class ItemsPerPage extends Component{
-    render(){ 
+    render(){
         if(this.props.itemsPerPageHandler)
             return (
                 <div>
                     <label>
-                    <select 
+                    <select
                         onChange={(e) => this.props.itemsPerPageHandler(parseInt(e.target.value))}>
                         <option value='5'>5</option>
                         <option value='10'>10</option>
@@ -103,7 +103,7 @@ class ItemsPerPage extends Component{
                 </div>
             );
         return <div></div>
-    } 
+    }
 }
 
 class TableOptions extends Component {
@@ -175,8 +175,8 @@ class Table extends Component{
         const className = this.props.className ? this.props.className:'table align-items-center';
         return(
             <Fragment>
-            { hasOptions && 
-                <TableOptions 
+            { hasOptions &&
+                <TableOptions
                     itemsPerPageHandler = { itemsPerPageHandler && itemsPerPageHandler.bind(this) }
                     searchHandler = { searchHandler.bind(this) } />
             }
@@ -195,5 +195,5 @@ class Table extends Component{
 Table.defaultProps = {
     hasOptions: false
 }
-  
+
 export default Table;

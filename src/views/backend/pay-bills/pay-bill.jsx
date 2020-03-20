@@ -2,6 +2,7 @@ import React,{Component, Fragment} from 'react';
 import Table from '../../../components/ui-components/table'
 import DataTable from 'react-data-table-component';
 import { NavLink } from 'react-router-dom';
+import { paybillService } from '../../../services';
 
 const customStyles = {
     headCells: {
@@ -25,11 +26,23 @@ const customStyles = {
         },
     },
 };
-    
+
 class PayBill extends Component{
-   
+    state = {
+        data: []
+    };
+    constructor(props) {
+        super(props);
+        paybillService.getAll()
+            .then(response => {
+                console.log(response)
+                this.setState({
+                    data: response.data
+                })
+            })
+    }
     render(){
-        const data=[
+        /*const data=[
             {
                 content:"Purpose Website UI",
                 image_url: '../../assets/img/theme/light/brand-avatar-1.png',
@@ -66,7 +79,7 @@ class PayBill extends Component{
             // ,{
             //     component: (<tr><td colspan="3"></td><td>Total = $1290</td><td colspan="3"></td></tr>)
             // }
-        ]
+        ]*/
         const columns = [
             {
                 name: 'Project',
@@ -74,7 +87,7 @@ class PayBill extends Component{
                 cell: row =>(
                 <div style={{width:'300px'}}>
                     <div className="media align-items-center">
-                    <div><img alt="placeholder" src={row.image_url} className="avatar  rounded-circle avatar-sm" /></div>
+                    {/*<div><img alt="placeholder" src={row.image_url} className="avatar  rounded-circle avatar-sm" /></div>*/}
                     <div className="media-body ml-4">
                         <a href={row.link} className="name mb-0 h6 text-sm">{row.content}</a>
                     </div>
@@ -103,20 +116,20 @@ class PayBill extends Component{
                                     <Fragment>
                                         <i className="bg-warning"></i>
                                         <span className="status">pending</span>
-                                    </Fragment>          
+                                    </Fragment>
                                 ): (
                                     !(row.status-2) ? (
                                         <Fragment>
                                             <i className="bg-danger"></i>
                                             <span className="status">delayed</span>
-                                        </Fragment>          
+                                        </Fragment>
                                     ):(
                                         !(row.status-3)? (
                                             <Fragment>
                                                 <i className="bg-success"></i>
                                                 <span className="status">completed</span>
-                                            </Fragment>          
-                                        ): (null) 
+                                            </Fragment>
+                                        ): (null)
                                     )
                                 )
                             )
@@ -147,7 +160,7 @@ class PayBill extends Component{
                 )
             }
         ];
-        
+
         return(
             <div className="row">
                 <div className="col-xl-12">
@@ -165,10 +178,10 @@ class PayBill extends Component{
                             </button>
                             </div>
                         </div>
-                        
+
                         <DataTable
                             columns={columns}
-                            data={data}
+                            data={this.state.data}
                             noHeader={true}
                             // selectableRows
                             // selectableRowsComponentProps={{ inkDisabled: true }}

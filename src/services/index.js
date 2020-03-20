@@ -6,3 +6,4 @@ axios.defaults.timeout = 25000;
 
 export * from './auth.service';
 export * from './notification.service';
+export * from './paybill.service';

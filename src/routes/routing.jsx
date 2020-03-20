@@ -16,101 +16,112 @@ import Login from '../views/frontend/login/login.jsx';
 import Recover from '../views/frontend/recover/recover.jsx';
 import Register from '../views/frontend/register/register.jsx';
 var ThemeRoutes = [
-    { 
-        path: '/admin/home', 
-        name: 'Home', 
-        icon: 'ti-loop', 
-        component: Starter 
-    },{ 
-        path: '/admin/notes', 
-        name: 'Notes', 
-        icon: 'ti-loop', 
-        component: Notes 
-    },{ 
-        path: '/admin/notifications', 
-        name: 'Notifications', 
-        icon: 'ti-loop', 
-        component: Notifications 
-    },{ 
-        path: '/admin/profile', 
-        name: 'Profile', 
-        icon: 'ti-loop', 
-        component: Profile 
-    },{ 
-        path: '/admin/tasks/add', 
-        name: 'Create', 
-        icon: 'ti-loop', 
-        component: Create 
-    },{ 
-        path: '/admin/tasks', 
-        name: 'Tasks', 
-        icon: 'ti-loop', 
-        component: Tasks 
-    },{ 
-        path: '/admin/calendar', 
-        name: 'Calendar', 
-        icon: 'ti-loop', 
-        component: Calendar 
-    },{ 
-        path: '/admin/pay-bill/add', 
-        name: 'PayForm', 
-        icon: 'ti-loop', 
-        component: PayForm 
-    },{ 
-        path: '/admin/pay-bill', 
-        name: 'PayBill', 
-        icon: 'ti-loop', 
-        component: PayBill 
-    },{ 
-        path: '/admin/contacts', 
-        name: 'Contacts', 
-        icon: 'ti-loop', 
-        component: Contacts 
-    },{ 
-        path: '/admin/', 
-        name: '404', 
-        icon: 'ti-loop', 
-        component: Page404 
-    },{ 
-        path: '/admin', 
-        name: 'Home', 
-        icon: 'ti-loop', 
-        component: Starter 
-    },{ 
-        path: '/aboutus', 
-        name: 'Aboutus', 
-        icon: 'ti-loop', 
-        component: Aboutus 
-    },{ 
-        path: '/contactus', 
-        name: 'Contactus', 
-        icon: 'ti-loop', 
-        component: Contactus 
-    },{ 
-        path: '/home', 
-        name: 'Home', 
-        icon: 'ti-loop', 
-        component: Home 
-    },{ 
-        path: '/login', 
-        name: 'Login', 
-        icon: 'ti-loop', 
-        component: Login 
-    },{ 
-        path: '/recover', 
-        name: 'Recover', 
-        icon: 'ti-loop', 
-        component: Recover 
-    },{ 
-        path: '/register', 
-        name: 'Register', 
-        icon: 'ti-loop', 
-        component: Register 
-    },{ 
-        path: '/', 
-        name: 'Home', 
-        icon: 'ti-loop', 
-        component: Home 
+    {
+        path: '/admin/home',
+        name: 'Home',
+        icon: 'ti-loop',
+        auth: true,
+        component: Starter
+    },{
+        path: '/admin/notes',
+        name: 'Notes',
+        icon: 'ti-loop',
+        auth: true,
+        component: Notes
+    },{
+        path: '/admin/notifications',
+        name: 'Notifications',
+        icon: 'ti-loop',
+        auth: true,
+        component: Notifications
+    },{
+        path: '/admin/profile',
+        name: 'Profile',
+        icon: 'ti-loop',
+        auth: true,
+        component: Profile
+    },{
+        path: '/admin/tasks/add',
+        name: 'Create',
+        icon: 'ti-loop',
+        auth: true,
+        component: Create
+    },{
+        path: '/admin/tasks',
+        name: 'Tasks',
+        icon: 'ti-loop',
+        auth: true,
+        component: Tasks
+    },{
+        path: '/admin/calendar',
+        name: 'Calendar',
+        icon: 'ti-loop',
+        auth: true,
+        component: Calendar
+    },{
+        path: '/admin/pay-bill/add',
+        name: 'PayForm',
+        icon: 'ti-loop',
+        auth: true,
+        component: PayForm
+    },{
+        path: '/admin/pay-bill',
+        name: 'PayBill',
+        icon: 'ti-loop',
+        auth: true,
+        component: PayBill
+    },{
+        path: '/admin/contacts',
+        name: 'Contacts',
+        icon: 'ti-loop',
+        auth: true,
+        component: Contacts
+    },{
+        path: '/admin/',
+        name: '404',
+        icon: 'ti-loop',
+        component: Page404
+    },{
+        path: '/admin',
+        name: 'Home',
+        icon: 'ti-loop',
+        auth: true,
+        component: Starter
+    },{
+        path: '/aboutus',
+        name: 'Aboutus',
+        icon: 'ti-loop',
+        component: Aboutus
+    },{
+        path: '/contactus',
+        name: 'Contactus',
+        icon: 'ti-loop',
+        component: Contactus
+    },{
+        path: '/home',
+        name: 'Home',
+        icon: 'ti-loop',
+        component: Home
+    },{
+        path: '/login',
+        name: 'Login',
+        icon: 'ti-loop',
+        component: Login
+    },{
+        path: '/recover',
+        name: 'Recover',
+        icon: 'ti-loop',
+        component: Recover
+    },{
+        path: '/register',
+        name: 'Register',
+        icon: 'ti-loop',
+        component: Register
+    },{
+        path: '/',
+        name: 'Home',
+        icon: 'ti-loop',
+        component: Home
     }
 ];
 export default ThemeRoutes;

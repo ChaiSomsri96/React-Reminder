@@ -3,8 +3,11 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../components/header/front_header.jsx';
 import Footer from '../components/footer/front_footer.jsx';
 import ThemeRoutes from '../routes/routing.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 class Frontlayout extends React.Component {
-	
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -12,8 +15,8 @@ class Frontlayout extends React.Component {
 			width: window.innerWidth
 		};
 	}
-	
-	
+
+
 	render() {
         let show_footer = true;
         if(this.props.history.location.pathname==='/login' || this.props.history.location.pathname==='/register'){
@@ -42,9 +45,9 @@ class Frontlayout extends React.Component {
                                 })}
                             </Switch>
                         </div>{
-                            show_footer ?  <Footer /> : null 
+                            show_footer ?  <Footer /> : null
                         }
-                        
+                        <ToastContainer/>
                     </div>
                 </div>
             </React.Fragment>

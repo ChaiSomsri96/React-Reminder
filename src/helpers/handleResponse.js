@@ -1,6 +1,9 @@
 import { authenticationService } from '../services';
+import {toast} from "react-toastify";
 
 export function handleResponse(response) {
+    console.log("response");
+    console.log(response);
     const data = response.data;
     if (response.status > 300) {
         if ([401, 403].indexOf(response.status) !== -1) {
@@ -14,4 +17,11 @@ export function handleResponse(response) {
     }
 
     return data;
+}
+
+export function handleError(err) {
+    if([401, 403].indexOf(err.status) !== -1) {
+        toast.error('Token expired \n Please sign in again.');
+        authenticationService.logout();
+    }
 }
